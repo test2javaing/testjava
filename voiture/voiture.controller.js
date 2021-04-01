@@ -3,7 +3,8 @@ app.controller('VoitureController', function ($scope, $location, $http, $cookies
     var user = $cookies.getObject("user");
     var liste_vtr = [];
     var liste_coms = [];
-    if (c_id == undefined) {
+    var uri = $location.absUrl().split("!")[1];
+    if (c_id == undefined && (uri.localeCompare("/voiture/ajouter") != 0)) {
         $http({
             method: "GET",
             url: base_url + "voiture"
@@ -38,6 +39,20 @@ app.controller('VoitureController', function ($scope, $location, $http, $cookies
                     liste_coms.push(response.data.data);
                     $scope.coms = liste_coms;
                     $route.reload();
+                }).catch(function (error) {
+                    console.log(error.data.data);
+                    $scope.error = error.data.message;
+                });
+            }
+
+            $scope.addCar = function() {
+                let vt = {
+                    nom: $scope.nom,
+                    prix: $scope.prix
+                }
+                $http.post(base_url + "voiture/add", JSON.stringify(vt))
+                .then(function (response) {
+                    $location.path("/voiture");
                 }).catch(function (error) {
                     console.log(error.data.data);
                     $scope.error = error.data.message;

@@ -8,6 +8,7 @@ app.controller('UserController', function ($scope, $location, $http, $cookies, $
         $http.post(base_url + "user/login", JSON.stringify(user))
         .then(function (response) {
             $cookies.putObject('user', response.data.data);
+            $rootScope.error = "";
             $rootScope.userName = response.data.data.nom;
             $location.path('/voiture');
         }).catch(function (error) {
