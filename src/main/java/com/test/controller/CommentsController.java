@@ -37,11 +37,11 @@ public class CommentsController {
     @Autowired
     CommentsRepository coms;
     
-    @GetMapping(value = "", headers = "Accept=application/json")
-    public Json get(HttpServletResponse res) {
+    @PostMapping(value = "/{id}", headers = "Accept=application/json")
+    public Json get(@PathVariable String id, HttpServletResponse res) {
         Json json = null;
         try {
-            List<Comments> st = coms.findAll();
+            List<Comments> st = coms.findByVoiture(id);
             json = new Json(Json.SUCCESS, st, "");
         } catch (Exception e) {
             e.printStackTrace();
