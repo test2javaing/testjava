@@ -1,0 +1,61 @@
+.login-container {
+    width: 100%;  
+    min-width: 280px;
+    min-height: 80vh;
+    /* margin: 0 auto; */
+    display: flex;
+    /* background: linear-gradient(to bottom, #86b8ff, #ffffff);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#login {
+    min-width: 280px;
+    width: 500px;
+    margin: auto;
+    padding: 5% 0 0;
+    border-color: #ffffff;
+}
+
+.login-container div {
+    width: 75%;
+    margin: 0 auto;
+}
+.login-container .btn {
+    opacity: 0.8;
+}
+
+#confirm {
+    display: none;
+    background-color: #91FF00;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ #confirm button {
+    background-color: #48E5DA;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+ }
+ #confirm .message {
+    text-align: left;
+ }
+
+body {
+    min-height: 100vh;
+    height: 100%; 
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}

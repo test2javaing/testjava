@@ -1,0 +1,32 @@
+<div class="text-center">
+    <div class="login-container align-middle">
+        <div id="login" class="shadow-lg p-3 mb-5 bg-transparent rounded my-auto">
+            <form class="form-group">
+                <img class="mb-4" src="assets/img/Asecna-logo.png" alt="" width="120" height="120">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                    <input type="text" id="inputName" class="form-control" ng-model="nom" placeholder="Name" required autofocus>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                    <input type="email" id="inputEmail" class="form-control" ng-model="mail" placeholder="Email address" required autofocus>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                    <input type="password" id="inputPassword" class="form-control" ng-model="mdp" placeholder="Password" required autofocus>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"></span>
+                    <input type="password" id="inputConfirmPassword" class="form-control" ng-model="confirm" placeholder="Confirm Password" required>
+                </div>
+                <span class="text-danger" ng-show="mdp != confirm">Les mots de passes saisis sont différents.</span>
+                <div class="input-group mb-3">
+                    <button class="btn btn-lg btn-primary btn-block" ng-disabled="mdp != confirm" type="submit" ng-click="signin()">Sign in</button>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#!/login">J'ai déjà un compte</a></div>
+                </div>
+                <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+            </form>
+        </div>
+</div>

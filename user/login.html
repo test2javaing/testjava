@@ -1,0 +1,24 @@
+<div class="text-center">
+    <div class="login-container">
+        <div id="login" class="shadow-lg p-3 mb-5 bg-transparent rounded my-auto">
+            <form class="form-group">
+                <img class="mb-4" src="assets/img/new_logo.png" alt="" width="120" height="120">
+                <div class="alert alert-danger" ng-if="error">{{error}}</div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-o"></i></span>
+                    <input type="email" id="inputEmail" ng-model="mail" nd class="form-control" placeholder="Addresse mail" required autofocus>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                    <input type="password" id="inputPassword" ng-model="mdp" class="form-control" placeholder="Mot de passe" required>
+                </div>
+                <div class="input-group mb-3">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Se connecter</button>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#!/signin">S'inscrire</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

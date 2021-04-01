@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/dist/bootstrap.min.css">
+    <link href="assets/css/dist/Chart.min.css" rel="stylesheet">
+    <link href="assets/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Voiture</title>
+</head>
+
+<body ng-app="test">
+    <div ng-controller="IndexController">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow p-3 mb-5">
+            <!-- navbar navbar-expand-sm navbar-light bg-transparent shadow p-3 mb-5 -->
+            <!-- navbar navbar-expand-sm bg-dark navbar-dark fixed-top -->
+            <a class="navbar-brand" href="#!/"><strong>Voiture</strong></a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#!/" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Actions</a>
+                        <div class="dropdown-menu shadow p-3 mb-5">
+                            <!-- <a class="dropdown-item" href="#!/{{u.nom}}" ng-repeat="u in unit">{{u.nom}}</a> -->
+                            <a class="dropdown-item" href="#!/voiture">Lister</a>
+                            <!-- <a class="dropdown-item" href="#!">Add</a> -->
+                        </div>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ml-md-auto">
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" id="usernavdrop" data-toggle="dropdown" aria-expanded="true"><span class="mb-0 font-weight-bold">{{userName}}</span> <i class="fa fa-user-circle fa-2x"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right shadow">
+                                <a class="dropdown-item" href="#!/login" ng-if="userName == undefined || userName == 'User'"><i class="fa fa-sign-in"></i> Se connecter</a>
+                                <a class="dropdown-item" href="#!/logout"  ng-if="userName != undefined || userName != 'User'"><i class="fa fa-sign-out"></i> Se déconnecter</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div ng-view></div>
+
+    <script type="text/javascript" src="assets/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/angular/angular-cookies.min.js"></script>
+    <script src="assets/js/dist/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/dist/popper.min.js"></script>
+    <script src="assets/js/dist/bootstrap.min.js"></script>
+    <script src="assets/js/dist/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/dist/Chart.bundle.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> -->
+    <script type="text/javascript" src="app.module.js"></script>
+    <script type="text/javascript" src="voiture/voiture.controller.js"></script>
+    <script type="text/javascript" src="user/user.controller.js"></script>
+    <script type="text/javascript" src="logout/logout.controller.js"></script>
+    <script type="text/javascript" src="comment/comment.controller.js"></script>
+</body>
+
+</html>
