@@ -2,7 +2,8 @@
     <div class="login-container align-middle">
         <div id="login" class="shadow-lg p-3 mb-5 bg-transparent rounded my-auto">
             <form class="form-group">
-                <img class="mb-4" src="assets/img/Asecna-logo.png" alt="" width="120" height="120">
+                <img class="mb-4" src="assets/img/new_logo.png" alt="" width="120" height="120">
+                <div class="alert alert-danger" ng-if="error">{{error}}</div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"></span>
                     <input type="text" id="inputName" class="form-control" ng-model="nom" placeholder="Name" required autofocus>
