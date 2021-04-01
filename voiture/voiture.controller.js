@@ -17,8 +17,8 @@ app.controller('VoitureController', function ($scope, $location, $http, $cookies
     } else { 
         if (user != undefined) {
             $http({
-                method: "GET",
-                url: base_url + "comment"
+                method: "POST",
+                url: base_url + "comment/"+ c_id
             }).then(function (response) {
                 $scope.coms = response.data.data;
                 liste_coms = liste_coms.concat(response.data.data);

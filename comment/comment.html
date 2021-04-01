@@ -3,7 +3,7 @@
         <img src="assets/img/1-6.jpg" class="img-fluid" alt="{{getVoitureById().nom}}">
         <div class="card-body">
             <div ng-repeat="c in coms">
-                <div class="card">
+                <div class="card shadow p-3 mb-1">
                     <h6 class="card-title"><small class="text-muted">{{c.date | date:"dd/MM/yyyy 'à' h:mm:ss"}}</small> {{c.id_usr}}</h6>
                     <p class="card-text">{{c.value}}</p>
                     <p class="card-text"></p>
