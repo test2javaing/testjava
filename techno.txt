@@ -1,0 +1,3 @@
+Base de données : Postgresql
+Backend : Spring Boot (spring data + spring data rest)
+Frontend : AngularJs, Bootstrap
